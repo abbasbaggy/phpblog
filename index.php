@@ -4,7 +4,7 @@ define('INCLUDE_DIR', dirname(__FILE__) . '/inc/');
 
 $rules = array(
     //main pages
-    'about'=>"about",
+    'about'=>"/about",
     'contactus'=>"/contactus",
     'blog'=>"/blog",
     'blog_article'=>"/blog/(?'blogID'[\w\-]+)",
