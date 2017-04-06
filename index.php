@@ -1,6 +1,6 @@
 <?php ini_set('display_errors', 1);
 
-define('INCLUDE_DIR', dirname("home.php") . '/inc/');
+define('INCLUDE_DIR', dirname(__FILE__) . '/inc/');
 
 $rules = array(
     //main pages
