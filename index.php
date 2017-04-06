@@ -15,7 +15,7 @@ $rules = array(
     'logout'=>"/logout",
 
     //Home page
-    'home'=>"home/"
+    'home'=>"home"
 );
 
 $uri = rtrim(dirname($_SERVER["SCRIPT_NAME"]), '/');
