@@ -18,7 +18,7 @@ session_start();
     <h1>The blog of chales Babbage</h1>
     <nav>
         <ul>
-            <li><a href="./">Home page</a></li>
+            <li><a href="Home">Home page</a></li>
             <li><a href="blog">My Blog</a></li>
             <li><a href="about">About me</a></li>
             <li><a href="contactus">Contact Me</a></li>
