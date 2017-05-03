@@ -11,7 +11,7 @@ $rules = array(
 
     //Admin pages
     'login'=>"/login",
-    'createarticle'=>"/create_article",
+    'create'=>"/create_article",
     'logout'=>"/logout",
 
     //Home page
