@@ -13,7 +13,7 @@
 include ("scripts/db_connect.php");
 include ("scripts/header_12.php");
 
-$articleID = $params['blogID'];
+$articleID = $params['blog2D'];
 
 echo "
 <main>
