@@ -24,6 +24,7 @@ while($row = $result->fetch_array())
 
     echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
     echo "<li><a href='api/{$articleID}'>{$articleName}</a> by {$articleAuthor}</li>";
+    echo json_encode($articleID,$articleName,$articleAuthor);
 }
 echo "
 </main>";
