@@ -17,7 +17,7 @@ echo"
 $request_method=$_SERVER["REQUEST_METHOD"];
 switch($request_method)
 {
-    case 'GET';
+    case 'GET':
 
         if(!empty($_GET["articleID"]))
         {
@@ -28,10 +28,38 @@ switch($request_method)
             get_article();
         }
         break;
+    case 'POST':
+        insert_article();
+        break;
     default:
         header("HTTP/1.0 405 not allowed");
 }
 
+
+function insert_article()
+{
+    global $link;
+    $articleID = str_replace(' ', '-', $_POST["articleName"]);
+    $articleName = $_POST["articleName"];
+    $articleText = $_POST["articleText"];
+    $articleAuthor = $_POST['author'];
+    $query ="INSERT INTO blogarticles SET articleID='{$articleID}, articleName={$articleName},articleText={$articleText}, articleAuthor={$articleAuthor}'";
+    if(mysqli_query($link,$query))
+    {
+        $response=array(
+            'status' => 1,
+            'status_message' => 'article added successfully.'
+        );
+    }
+    else
+    {
+        $response=array(
+            'status' => 0,
+            'status_message' =>'product Addition failed.'
+        );
+    }
+    echo json_encode($response);
+}
 
 function get_article($articleID=0)
 {
