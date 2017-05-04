@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $sql = "SELECT * FROM users WHERE username='" . $username . "' and 
         password='" . $password . ".";
         $result = mysqli_query($link,$sql);
-        while ($row = mysqli_fetch_row($result)) {
+        while ($row = mysqli_fetch_array($result)) {
         return true;
     }
     return false;

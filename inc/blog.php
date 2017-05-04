@@ -20,7 +20,7 @@ while($row = $result->fetch_array())
 {
     $articleID = $row['articleID'];
     $articleName = $row['articleName'];
-    $articleAuthor = $row['articleAuthour'];
+    $articleAuthor = $row['articleAuthor'];
 
     echo "<li><a href='blog'/{$articleID}'>{$articleName}</a> by {$articleAuhtor}</li>";
 }
