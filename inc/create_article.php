@@ -36,10 +36,10 @@
         } else {
             echo "Error: " . $sql . "<br>Error Message:" . mysqli_error($link);
         }
-        header("blog");
+        header('blog');
 
     //test
 } else {
-    header("location:login");
+    header("location:'login'");
 }
 ?>
