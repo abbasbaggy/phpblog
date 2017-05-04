@@ -23,12 +23,12 @@ session_start();
             <li><a href="about">About me</a></li>
             <li><a href="contactus">Contact Me</a></li>
             <?php
-            if (isset($_SESSION['username'])) {
+
                 echo "<li><a href='createarticle'>Create Article</a></li>";
                 echo "<li><a href='logout'>logout</a></li>";
-            } else {
+
                 echo "<li><a href='login'>Login</a></li>";
-            }
+
             ?>
         </ul>
     </nav>
