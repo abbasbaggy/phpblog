@@ -19,26 +19,5 @@ include("scripts/header.php");
         <input type="submit">
     </form>
 
-<?php
 
-global $link;
-$articleID = str_replace(' ', '-', $_POST["articleName"]);
-$articleName = $_POST["articleName"];
-$articleText = $_POST["articleText"];
-$articleAuthor = $_POST['author'];
-$query ="INSERT INTO blogarticles SET articleID='{$articleID}, articleName={$articleName},articleText={$articleText}, articleAuthor={$articleAuthor}'";
-if(mysqli_query($link,$query))
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'article added successfully.'
-    );
-}
-else
-{
-    $response=array(
-        'status' => 0,
-        'status_message' =>'product Addition failed.'
-    );
-}
-echo json_encode($response);
+
