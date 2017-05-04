@@ -5,3 +5,24 @@
  * Date: 3/22/2017
  * Time: 10:49 PM
  */
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The blog of the Chales babbage</title>
+    </head>
+    <body>
+    <header>
+        <h1>The blog of chales Babbage</h1>
+        <nav>
+            <ul>
+                <li><a href="./">Home page</a></li>
+                <li><a href="blog">My Blog</a></li>
+                <li><a href="about">About me</a></li>
+                <li><a href="contactus">Contact Me</a></li>
+<?php
+
+echo "<li><a href='createarticle'>Create Article</a></li>";
+echo "<li><a href='logout'>logout</a></li>";
+
