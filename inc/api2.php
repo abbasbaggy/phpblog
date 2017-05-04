@@ -12,7 +12,7 @@ include("scripts/header.php");
 <main>
     <script scr="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({selector: 'textarea'});</script>
-    <form action="createarticle" method="post">
+    <form action="blog.php" method="POST">
         <input type="text" name="articleName" placeholder="Article Name">
         <textarea name="articleText"></textarea>
         <input type="text" name="author" placeholder="Article Author">
