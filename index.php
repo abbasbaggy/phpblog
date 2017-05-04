@@ -7,13 +7,13 @@ $rules = array(
     'about'=>"/about",
     'contactus'=>"/contactus",
     'blog'=>"/blog",
-    'blog_article'=>"/blog/(?'blogD'[\w\-]+)",
+    'blog_article'=>"/blog/(?'blogID'[\w\-]+)",
 
     //Admin pages
     'login'=>"/login",
     'create_article'=>"/createarticle",
     'logout'=>"/logout",
-    'api'=>"/api",
+    'api'=>"/api/(?'blog2D'[\w\-]+)",
 
     //Home page
     'home'=>"/"
