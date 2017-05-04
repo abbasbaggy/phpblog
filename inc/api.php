@@ -40,8 +40,11 @@ switch($request_method)
 function get_article($articleID=0)
 {
     global $link;
-    $query="SELECT * FROM blogarticles WHERE articleID ='$articleID'";
-
+    $query="SELECT * FROM blogarticles";
+    if($articleID != 0)
+    {
+        $query.=" WHERE articleID=".$articleID." LIMIT 1";
+    }
     $response=array();
     $result= mysqli_query($link, $query);
     while($row=mysqli_fetch_array($result))
