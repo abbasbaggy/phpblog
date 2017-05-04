@@ -43,7 +43,9 @@ function insert_article()
     $articleName = $_POST["articleName"];
     $articleText = $_POST["articleText"];
     $articleAuthor = $_POST['author'];
-    $query ="INSERT INTO blogarticles SET articleID='{$articleID}, articleName={$articleName},articleText={$articleText}, articleAuthor={$articleAuthor}'";
+    $query = "INSERT INTO blogarticles (articleID, articleName, articleText, articleAuthor) 
+        VALUES ('" . $articleID . "', '" . $articleName . "', '" . $articleText . "', '" . $articleAuthor . "')";
+
     if(mysqli_query($link,$query))
     {
         $response=array(
