@@ -51,6 +51,7 @@ function get_article($articleID=0)
     {
         $response[]=$row;
     }
+    header('Content-Type: application/json');
     echo json_encode($response);
 }
 
