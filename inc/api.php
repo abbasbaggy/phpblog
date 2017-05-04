@@ -40,14 +40,14 @@ switch($request_method)
 function get_article($articleID=0)
 {
     global $link;
-    $sql="SELECT * FROM blogarticles";
+    $query="SELECT * FROM blogarticles";
     if($articleID != 0)
     {
-        $sql.=" WHERE articleID=".$articleID." LIMIT 1";
+        $query.=" WHERE articleID=".$articleID." LIMIT 1";
     }
     $response=array();
-    $result= $link->query($sql);
-    while($row=$result->fetch_array())
+    $result= mysqli_query($link, $query);
+    while($row=mysqli_fetch_array($result))
     {
         $response[]=$row;
     }
