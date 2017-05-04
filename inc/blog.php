@@ -14,15 +14,15 @@ echo"
 <p>Below is a list of all articles</p>
 <ul>";
 
-$sql = "SELECT * FROM blogArticles";
-$result = $link->query(sql);
+$sql = "SELECT * FROM blogarticles";
+$result = $link->query($sql);
 while($row = $result->fetch_array())
 {
-    $articleID = $roq['articleID'];
+    $articleID = $row['articleID'];
     $articleName = $row['articleName'];
     $articleAuthor = $row['articleAuthour'];
 
-    echo "<li><a href='blog/{$articleID}'>{$articleName}</a> by {$articleAuhtor}</li>";
+    echo "<li><a href='blog'/{$articleID}'>{$articleName}</a> by {$articleAuhtor}</li>";
 }
 echo "
 </main>";
