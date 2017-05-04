@@ -13,7 +13,7 @@ echo "
 <main>
 ";
 
-$sql = "SELECT * FROM blogArticles where articleID = '$article'";
+$sql = "SELECT * FROM blogarticles where articleID = '$article'";
 $result = $link->query($sql);
 
 while($row = $result->fetch_array())
