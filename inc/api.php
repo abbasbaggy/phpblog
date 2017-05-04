@@ -23,7 +23,7 @@ switch($request_method)
 {
     case 'GET';
 
-        if(!empty($_GET["article_id"]))
+        if(!empty($_GET["articleID"]))
         {
             $articleID=intval($_GET["articleID"]);
             get_article($articleID);
