@@ -18,42 +18,14 @@ $articleID = $params['blog2D'];
 echo "
 <main>
 ";
-$request_method=$_SERVER["REQUEST_METHOD"];
-switch($request_method)
-{
-    case 'GET';
+$sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
+$res=array();
+$result = $link->query($sql);
 
-        if(!empty($_GET["articleID"]))
-        {
-            $articleID=intval($_GET["articleID"]);
-            get_article($articleID);
-        }
-        else{
-            get_article();
-        }
-        break;
-    default:
-        header("HTTP/1.0 405 not allowed");
+while($row = $result->fetch_array()) {
+    $res[]=$row;
 }
-
-
-function get_article($articleID=0)
-{
-    global $link;
-    $query="SELECT * FROM blogarticles";
-    if($articleID != 0)
-    {
-        $query.=" WHERE articleID=".$articleID." LIMIT 1";
-    }
-    $response=array();
-    $result= mysqli_query($link, $query);
-    while($row=mysqli_fetch_array($result))
-    {
-        $response[]=$row;
-    }
-
-    echo json_encode($response);
-}
+    echo json_encode($res);
 
 echo"
 </main>
