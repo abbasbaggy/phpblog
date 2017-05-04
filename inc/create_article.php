@@ -16,6 +16,7 @@
             <form action="createarticle" method="post">
                 <input type="text" name="articleName" placeholder="Article Name">
                 <textarea name="articleText"></textarea>
+                <input type="text" name="author" placeholder="Article Author">
                 <input type="submit">
             </form>
 
@@ -27,7 +28,7 @@
         $articleID = str_replace(' ', '-', $_POST["articleName"]);
         $articleName = $_POST["articleName"];
         $articleText = $_POST["articleText"];
-        $articleAuthor = $_SESSION['username'];
+        $articleAuthor = $_POST['author'];
 
         $sql = "INSERT INTO blogArticle (articleID, articleName, articleText, articleAuthor) 
         VALUES ('" . $articleID . "', '" . $articleName . "', '" . $articleText . "', '" . $articleAuthor . "')";
