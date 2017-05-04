@@ -8,7 +8,7 @@
 include ("scripts/db_connect.php");
 include ("scripts/header_12.php");
 
-$articleID = $params['blogID'];
+$articleID = $params['blogD'];
 echo "
 <main>
 ";
