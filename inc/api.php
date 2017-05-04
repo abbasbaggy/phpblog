@@ -12,8 +12,8 @@
 
 include ("scripts/db_connect.php");
 include ("scripts/header_12.php");
-$articleID1= $articleID.'get';
-$articleID1 = $params['blog2D'];
+
+$articleID = $params['blog2D'];
 
 echo "
 <main>
