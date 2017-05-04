@@ -24,7 +24,7 @@ session_start();
             <li><a href="contactus">Contact Me</a></li>
             <?php
             echo "<li><a href='api'>api test1</a></li>";
-            echo "<li><a href='api2'>api test</a></li>";
+            echo "<li><a href='api2'>api test2</a></li>";
 
                 echo "<li><a href='createarticle'>Create Article</a></li>";
                 echo "<li><a href='logout'>logout</a></li>";
