@@ -13,7 +13,7 @@
 include ("scripts/db_connect.php");
 include ("scripts/header_12.php");
 
-$article_id = $params['blog2D'];
+$articleID = $params['blog2D'];
 
 echo "
 <main>
@@ -25,8 +25,8 @@ switch($request_method)
 
         if(!empty($_GET["article_id"]))
         {
-            $article_id=intval($_GET["article_id"]);
-            get_article($article_id);
+            $articleID=intval($_GET["articleID"]);
+            get_article($articleID);
         }
         else{
             get_article();
@@ -37,13 +37,13 @@ switch($request_method)
 }
 
 
-function get_article($article_id=0)
+function get_article($articleID=0)
 {
     global $link;
     $sql="SELECT * FROM blogarticles";
-    if($article_id != 0)
+    if($articleID != 0)
     {
-        $sql.=" WHERE articleID=".$article_id." LIMIT 1";
+        $sql.=" WHERE articleID=".$articleID." LIMIT 1";
     }
     $response=array();
     $result= $link->query($sql);
