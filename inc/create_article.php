@@ -5,7 +5,9 @@
  * Date: 3/18/2017
  * Time: 11:51 PM
  */
-
+session_start();
+if (isset($_SESSION['username']))  //if session does exist
+{
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         include("scripts/header.php");
@@ -38,7 +40,7 @@
         header("blog");
     }
     //test
- else {
+} else {
     header("location:login");
 }
 ?>

@@ -21,7 +21,6 @@ session_start();
             <li><a href="./">Home page</a></li>
             <li><a href="blog">My Blog</a></li>
             <li><a href="about">About me</a></li>
-            <li><a href="create_article">create article</a></li>
             <li><a href="contactus">Contact Me</a></li>
             <?php
             if (isset($_SESSION['username'])) {

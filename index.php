@@ -13,6 +13,7 @@ $rules = array(
     'login'=>"/login",
     'create_article'=>"/createarticle",
     'logout'=>"/logout",
+    'api'=>"/api",
 
     //Home page
     'home'=>"/"
