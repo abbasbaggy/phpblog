@@ -30,7 +30,7 @@
         $articleText = $_POST["articleText"];
         $articleAuthor = $_POST['author'];
 
-        $sql = "INSERT INTO blogArticle (articleID, articleName, articleText, articleAuthor) 
+        $sql = "INSERT INTO blogarticles (articleID, articleName, articleText, articleAuthor) 
         VALUES ('" . $articleID . "', '" . $articleName . "', '" . $articleText . "', '" . $articleAuthor . "')";
         if (mysqli_query($link, $sql)) {
         } else {
