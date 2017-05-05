@@ -23,7 +23,7 @@ include("scripts/header.php");
 <?php
 
     include ("scripts/db_connect.php");
-    $articleID = $params['blog3D'];
+    $articleID = $params['blog2D'];
     $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
     $result = mysqli_query($link,$sql);
     $row = mysqli_fetch_assoc($result);
