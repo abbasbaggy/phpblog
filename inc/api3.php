@@ -20,7 +20,7 @@ include("scripts/header.php");
         <input type="text" name="articleName" placeholder="Article Name"
         required value="<?php echo $row['articleName'];?>" />
 
-        <textarea name="articleText" required value="<?php echo $row['articleText'];?>" />></textarea>
+        <textarea name="articleText" /> "<?php echo $row['articleText'];?>"</textarea>
 
         <input type="text" name="author" placeholder="Article Author"
                required value="<?php echo $row['articleAuthor'];?>" />
