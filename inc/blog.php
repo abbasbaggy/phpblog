@@ -61,7 +61,7 @@ function insert_article()
     {
         $response=array(
             'status' => 0,
-            'status_message' =>'product Addition failed.'
+            'status_message' =>'article Addition failed.'
         );
     }
     echo json_encode($response);
