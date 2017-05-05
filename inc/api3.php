@@ -16,7 +16,7 @@ include("scripts/header.php");
 <main>
     <script scr="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({selector: 'textarea'});</script>
-    <form action="api" method="PUT">
+    <form action="./api" method="PUT">
         <input type="text" name="articleName" placeholder="Article Name"
         required value="<?php echo $row['articleName'];?>" />
 
