@@ -11,11 +11,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Blog of Charles Babbage</title>
+    <title>The Api</title>
 </head>
 <body>
 <footer>
-    <p>(c)2017 - Babbage Computing System</p>
+    <p>(c)2017 - ApI System</p>
 </footer>
 </body>
 </html>

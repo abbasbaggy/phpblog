@@ -21,6 +21,7 @@ include("scripts/header.php");
         required value="<?php echo $row['articleName'];?>" />
 
         <textarea name="articleText"></textarea>
+
         <input type="text" name="author" placeholder="Article Author"
                required value="<?php echo $row['articleAuthor'];?>" />
         <input type="submit">
