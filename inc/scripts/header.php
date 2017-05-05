@@ -19,7 +19,7 @@ session_start();
     <nav>
         <ul>
             <li><a href="./">Home page</a></li>
-            <li><a href="blog">My ApI</a></li>
+            <li><a href="api">My ApI</a></li>
 
             <?php
             echo "<li><a href='api'>api test1</a></li>";
