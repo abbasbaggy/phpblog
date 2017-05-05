@@ -17,6 +17,7 @@ $rules = array(
     'logout'=>"/logout",
     'api'=>"/api/(?'blog2D'[\w\-]+)",
     'api2'=>"/api2",
+    'api3'=>"/api3./(?'blog3D'[\w\-]+)",
 
     //Home page
     'home'=>"/"

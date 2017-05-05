@@ -11,11 +11,11 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The blog of the Chales babbage</title>
+    <title>The ApI</title>
 </head>
 <body>
 <header>
-    <h1>The blog of chales Babbage</h1>
+    <h1>The ApI</h1>
     <nav>
         <ul>
             <li><a href="./">Home page</a></li>
