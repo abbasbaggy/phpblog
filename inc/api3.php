@@ -5,6 +5,11 @@
  * Date: 5/5/2017
  * Time: 1:41 AM
  */
+include ("scripts/db_connect.php");
+$articleID = $params['blog2D'];
+$sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
+$result = mysqli_query($link,$sql);
+$row = mysqli_fetch_assoc($result);
 
 include("scripts/header.php");
 ?>
@@ -20,10 +25,3 @@ include("scripts/header.php");
                required value="<?php echo $row['articleAuthor'];?>" />
         <input type="submit">
     </form>
-<?php
-
-    include ("scripts/db_connect.php");
-    $articleID = $params['blog2D'];
-    $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
-    $result = mysqli_query($link,$sql);
-    $row = mysqli_fetch_assoc($result);
