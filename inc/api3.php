@@ -5,7 +5,7 @@
  * Date: 5/5/2017
  * Time: 1:41 AM
  */
-
+include ("scripts/db_connect.php");
 $articleID = $params['blog3D'];
 $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
 $result = mysqli_query($link,$sql);
