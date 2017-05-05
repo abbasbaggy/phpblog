@@ -8,7 +8,7 @@
 
 $articleID = $params['blog3D'];
 $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
-$result = $link->query($sql);
+$result = mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($result);
 
 include("scripts/header.php");
