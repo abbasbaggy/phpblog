@@ -87,11 +87,11 @@ function get_article($articleID=0)
 function update_article($articleID)
 {
     global $link;
-    par_str(file_get_contents("php://input"),$post_vars);
-    $articleID=$post_vars['articleID'];
-    $articleName=$post_vars['article_name'];
-    $articleText=$post_vars['articleText'];
-    $articleAuthor=$post_vars['articleAuthor'];
+
+    $articleID=$_POST['articleID'];
+    $articleName=$_POST['article_name'];
+    $articleText=$_POST['articleText'];
+    $articleAuthor=$_POST['articleAuthor'];
     $query = "UPDATE blogarticles SET (articleName, articleText, articleAuthor) 
         VALUES ('" . $articleName . "', '" . $articleText . "', '" . $articleAuthor . "')WHERE articleID='".$articleID."'";
     if(mysqli_query($link, $query))
