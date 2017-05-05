@@ -10,7 +10,7 @@ include ("scripts/header.php");
 
 echo"
 <main>
-<h2>Blog Article</h2>
+<h2>Data test</h2>
 <p>Below is a list of all articles</p>
 <ul>";
 

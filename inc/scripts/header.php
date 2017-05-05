@@ -19,17 +19,13 @@ session_start();
     <nav>
         <ul>
             <li><a href="./">Home page</a></li>
-            <li><a href="blog">My Blog</a></li>
-            <li><a href="about">About me</a></li>
-            <li><a href="contactus">Contact Me</a></li>
+            <li><a href="blog">My ApI</a></li>
+
             <?php
             echo "<li><a href='api'>api test1</a></li>";
             echo "<li><a href='api2'>api test2</a></li>";
 
-                echo "<li><a href='createarticle'>Create Article</a></li>";
-                echo "<li><a href='logout'>logout</a></li>";
 
-                echo "<li><a href='login'>Login</a></li>";
 
             ?>
         </ul>
