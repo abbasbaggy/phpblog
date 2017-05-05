@@ -16,7 +16,7 @@ $rules = array(
     'create_article'=>"/createarticle",
     'logout'=>"/logout",
     'api'=>"/api/(?'blog2D'[\w\-]+)",
-    'api2'=>"/api",
+    'api2'=>"/api2",
     'api3'=>"/api/(?'blog2D'[\w\-]+)/update",
 
     //Home page
