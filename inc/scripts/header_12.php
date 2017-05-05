@@ -22,6 +22,6 @@
 
 <?php
 
-echo "<li><a href='api2'>Create Article</a></li>";
-echo "<li><a href='api3'>update Article</a></li>";
+echo "<li><a href='./api2'>Create Article</a></li>";
+echo "<li><a href='./api3'>update Article</a></li>";
 
