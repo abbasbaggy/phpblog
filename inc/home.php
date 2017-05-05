@@ -9,8 +9,11 @@ include ("scripts/header.php");
 
 echo"
 <main>
-<p>Welcome to the blog of charles babbage! In this blog you will
-see all of my insights and wonderful things</p>
+<p>This is abbas Api </p>
+<p>to GET all data 'http://webdevrgu.azurewebsites.net/api' to the address bar</p>
+<p>to POST a data 'http://webdevrgu.azurewebsites.net/api2' to the address bar</p>
+
+
 </main>
 ";
 include ("scripts/footer.php");
