@@ -6,7 +6,7 @@
  * Time: 1:41 AM
  */
 include ("scripts/db_connect.php");
-$articleID = $params['blog2D'];
+$articleID = $params['blog3D'];
 $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
 $result = mysqli_query($link,$sql);
 $row = mysqli_fetch_assoc($result);
