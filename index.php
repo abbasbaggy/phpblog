@@ -6,7 +6,7 @@ $rules = array(
     //main pages
     'about'=>"/about",
     'contactus'=>"/contactus",
-    'blog'=>"/api/2",
+    'blog'=>"/api",
     'blog_article'=>"/blog/(?'blogID'[\w\-]+)",
     'blog_article2'=>"/blog/(?'blogUP'[\w\-]+)",
 
@@ -16,7 +16,7 @@ $rules = array(
     'create_article'=>"/createarticle",
     'logout'=>"/logout",
     'api'=>"/api/(?'blog2D'[\w\-]+)",
-    'api2'=>"/api2",
+    'api2'=>"/api",
     'api3'=>"/api/(?'blog2D'[\w\-]+)/update",
 
     //Home page
