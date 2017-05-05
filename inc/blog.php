@@ -35,8 +35,11 @@ switch($request_method)
         $articleID=intval($_GET["articleID"]);
         update_article($articleID);
         break;
+    case 'DELETE':
+        $articleID = intval($_GET["articleID"]);
+        delete_product($articleID);
     default:
-        header("HTTP/1.0 405 not allowed");
+        header("HTTP/1.0 404 not available");
 }
 
 
@@ -82,6 +85,26 @@ function get_article($articleID=0)
         $response[]=$row;
     }
 
+    echo json_encode($response);
+}
+function delete_article($articleID)
+{
+    global $link;
+    $sql = "SELECT * FROM blogarticles where articleID = '$articleID'";
+
+    if(mysqli_query($link,$sql))
+    {
+        $response=array(
+            'status'=> 1,
+            'status_message'=>'article deleted successful.'
+        );
+    }
+    else{
+        $response=array(
+            'status'=> 0,
+            'status_message'=>'article deleted failed.'
+        );
+    }
     echo json_encode($response);
 }
 function update_article($articleID)
