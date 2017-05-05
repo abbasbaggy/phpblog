@@ -6,7 +6,7 @@ $rules = array(
     //main pages
     'about'=>"/about",
     'contactus'=>"/contactus",
-    'blog'=>"/api",
+    'blog'=>"/api/2",
     'blog_article'=>"/blog/(?'blogID'[\w\-]+)",
     'blog_article2'=>"/blog/(?'blogUP'[\w\-]+)",
 
