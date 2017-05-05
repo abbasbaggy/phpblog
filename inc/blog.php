@@ -31,6 +31,10 @@ switch($request_method)
     case 'POST':
         insert_article();
         break;
+    case 'PUT':
+        $articleID=intval($_GET["articleID"]);
+        update_article($articleID);
+        break;
     default:
         header("HTTP/1.0 405 not allowed");
 }
@@ -78,6 +82,31 @@ function get_article($articleID=0)
         $response[]=$row;
     }
 
+    echo json_encode($response);
+}
+function update_article($articleID)
+{
+    global $link;
+    par_str(file_get_contents("php://input"),$post_vars);
+    $articleID=$post_vars['articleID'];
+    $articleName=$post_vars['article_name'];
+    $articleText=$post_vars['articleText'];
+    $articleAuthor=$post_vars['articleAuthor'];
+    $query = "UPDATE blogarticles SET (articleName, articleText, articleAuthor) 
+        VALUES ('" . $articleName . "', '" . $articleText . "', '" . $articleAuthor . "')WHERE articleID='".$articleID."'";
+    if(mysqli_query($link, $query))
+    {
+        $response=array(
+            'status' => 1,
+            'status_message' =>'article Updated Successful'
+        );
+    }
+    else{
+        $response=array(
+            'status'=> 0,
+            'status_message' => 'article update failed'
+        );
+    }
     echo json_encode($response);
 }
 
